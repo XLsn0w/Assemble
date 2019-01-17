@@ -1,0 +1,6 @@
+framework module Pods_Assemble {
+  umbrella header "Pods-Assemble-umbrella.h"
+
+  export *
+  module * { export * }
+}
