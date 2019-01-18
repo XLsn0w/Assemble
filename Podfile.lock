@@ -15,6 +15,11 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - CocoaAsyncSocket (7.6.3)
+  - FBAllocationTracker (0.1.5)
+  - FBMemoryProfiler (0.1.3):
+    - FBAllocationTracker (~> 0.1)
+    - FBRetainCycleDetector (~> 0.1)
+  - FBRetainCycleDetector (0.1.4)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -41,6 +46,7 @@ PODS:
   - YYText (1.0.7)
 
 DEPENDENCIES:
+  - FBMemoryProfiler
   - KVOController
   - MJExtension
   - MJRefresh
@@ -54,6 +60,9 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - CocoaAsyncSocket
+    - FBAllocationTracker
+    - FBMemoryProfiler
+    - FBRetainCycleDetector
     - FMDB
     - KVOController
     - Masonry
@@ -71,6 +80,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
+  FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -85,6 +97,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 72f59e00a7ad75ded9fa6b165eb0f581332833e1
+PODFILE CHECKSUM: aa73205c2898ebc2c69ddf005528e2cafdae0763
 
 COCOAPODS: 1.5.3

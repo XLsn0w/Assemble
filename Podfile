@@ -19,5 +19,7 @@ pod 'YYText'
 pod 'SnapKit'
 
 pod 'KVOController'
+pod 'FBMemoryProfiler'
+
 
 end
