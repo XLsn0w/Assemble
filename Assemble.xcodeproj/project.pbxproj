@@ -15,6 +15,7 @@
 		7896D3B121EF335E0012018B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3B021EF335E0012018B /* main.m */; };
 		7896D3BB21EF335E0012018B /* AssembleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3BA21EF335E0012018B /* AssembleTests.m */; };
 		7896D3C621EF335E0012018B /* AssembleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3C521EF335E0012018B /* AssembleUITests.m */; };
+		78B5AF0721F722230038B6E5 /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5AF0621F722230038B6E5 /* iOS.swift */; };
 		B24487650467B2EA1259FE16 /* Pods_Assemble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10259D2AD8A1045A2E126728 /* Pods_Assemble.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		7896D3C121EF335E0012018B /* AssembleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssembleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7896D3C521EF335E0012018B /* AssembleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssembleUITests.m; sourceTree = "<group>"; };
 		7896D3C721EF335E0012018B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B5AF0521F722230038B6E5 /* Assemble-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Assemble-Bridging-Header.h"; sourceTree = "<group>"; };
+		78B5AF0621F722230038B6E5 /* iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS.swift; sourceTree = "<group>"; };
 		9C0B0FF926F26895FB437512 /* Pods-Assemble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assemble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Assemble/Pods-Assemble.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,11 +123,13 @@
 				7896D3A221EF335E0012018B /* AppDelegate.m */,
 				7896D3A421EF335E0012018B /* ViewController.h */,
 				7896D3A521EF335E0012018B /* ViewController.m */,
+				78B5AF0621F722230038B6E5 /* iOS.swift */,
 				7896D3A721EF335E0012018B /* Main.storyboard */,
 				7896D3AA21EF335E0012018B /* Assets.xcassets */,
 				7896D3AC21EF335E0012018B /* LaunchScreen.storyboard */,
 				7896D3AF21EF335E0012018B /* Info.plist */,
 				7896D3B021EF335E0012018B /* main.m */,
+				78B5AF0521F722230038B6E5 /* Assemble-Bridging-Header.h */,
 			);
 			path = Assemble;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				TargetAttributes = {
 					7896D39D21EF335E0012018B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					7896D3B521EF335E0012018B = {
 						CreatedOnToolsVersion = 10.1;
@@ -372,6 +378,7 @@
 				7896D3A621EF335E0012018B /* ViewController.m in Sources */,
 				7896D3B121EF335E0012018B /* main.m in Sources */,
 				7896D3A321EF335E0012018B /* AppDelegate.m in Sources */,
+				78B5AF0721F722230038B6E5 /* iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +550,7 @@
 			baseConfigurationReference = 6ABC8F017EC2B599491BAF36 /* Pods-Assemble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Assemble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,6 +559,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timeforest.Assemble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Assemble/Assemble-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -560,6 +571,7 @@
 			baseConfigurationReference = 9C0B0FF926F26895FB437512 /* Pods-Assemble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Assemble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -568,6 +580,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timeforest.Assemble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Assemble/Assemble-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -575,6 +589,7 @@
 		7896D3CE21EF335E0012018B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AssembleTests/Info.plist;
@@ -593,6 +608,7 @@
 		7896D3CF21EF335E0012018B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AssembleTests/Info.plist;
@@ -611,6 +627,7 @@
 		7896D3D121EF335E0012018B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AssembleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,6 +645,7 @@
 		7896D3D221EF335E0012018B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AssembleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
