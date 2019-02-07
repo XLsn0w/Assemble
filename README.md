@@ -15,8 +15,6 @@ Objective C源文件(.m)的编译器是Clang + LLVM，Swift源文件的编译器
 
 # 源码分析
 
-[TOC]
-
 ### UITableView+FDTemplateLayoutCell
 
 主要是一个缓存cell高度的控件，作者孙源博客讲解地址[http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/](http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/)
@@ -69,22 +67,25 @@ public let base: Base
 ​
 ​Event是一个枚举,表示Signal的状态
 ​
-​```swift
+```
+swift
 ​public enum Event<Value, Error: Swift.Error> {
 ​case value(Value)
 ​case failed(Error)
 ​case completed
 ​case interrupted
 ​}
-​```
+​
+```
 ​
 ​- Observer.swift
 ​
 ​Observer是一个类，里边有Action类型变量，Action是一个Block
 ​
-​```swift
+```
+swift
 ​public typealias Action = (Event<Value, Error>) -> Void
-​```
+```
 ​
 ​Observer有一系列send函数，函数作用就是执行action
 ​
@@ -97,7 +98,7 @@ public let base: Base
 ​
 ​- 每一个TaskDelegate都有一个串行队列queue，且队列是挂起状态的
 ​
-​```swift
+```
 ​init(task: URLSessionTask?) {
 ​self.task = task
 ​
@@ -111,26 +112,30 @@ public let base: Base
 ​return operationQueue
 ​}()
 ​}
-​```
+```
 ​
 ​- SessionManager负责创建和管理Request对象和他的`NSURLSession`。SessionManager有一个`open let delegate: SessionDelegate`SessionDelegate管理所有的网络回调
 ​
 ​- 当调用`Alamofire.request(urlRequest)`时调用堆栈
 ​
+
+```
 ​- Alamofire.request(urlRequest)
 ​- SessionManager.default.request(urlRequest)
 ​- DataRequest: request.resume()
 ​- URLSessionTask: task.resume()
 ​
 ​- 当SessionDelegate（实现了URLSessionTaskDelegate方法）收到网络回调时会调用DataTaskDelegate（集成TaskDelegate）的代理
-​
-​```swift
+```
+
+```
 ​delegate.urlSession(session, task: task, didCompleteWithError: error)
-​```
+```
 ​
 ​- DataTaskDelegate会把悬挂的队列启动queue.isSuspended = false
 ​
-​```swift
+
+```
 ​@objc(URLSession:task:didCompleteWithError:)
 ​func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
 ​if let taskDidCompleteWithError = taskDidCompleteWithError {
@@ -141,11 +146,11 @@ public let base: Base
 ​queue.isSuspended = false
 ​}
 ​}
-​```
+```
 ​
 ​- 当调用responseJSON时就是向TaskDelegate的队列中添加处理返回值的任务。调用堆栈如下：
 ​
-​```swift
+```
 ​delegate.queue.addOperation {
 ​let result = responseSerializer.serializeResponse(
 ​self.request,
@@ -167,7 +172,7 @@ public let base: Base
 ​(queue ?? DispatchQueue.main).async { completionHandler(dataResponse) }
 ​}
 ​
-​```
+```
 ​
 ​​
 ​​
@@ -179,9 +184,11 @@ public let base: Base
 ​​- [array mutableCopy]   可变数组                            // 指针copy,容器单层浅copy
 ​​- [mutableArray mutableCopy]   可变数组             // 指针copy,容器单层浅copy
 ​​- [mutableArray copy]   不可变数组                         // 指针copy,容器单层浅copy
+​​
 ​​- 字符串拷贝
 ​​- NSString [str copy]字符串
 ​​- copy不会创建新的对象
+​​
 ​​- mutableCopy会创建新的对象
 ​​- NSMutableString [str copy]字符串
 ​​- copy、mutableCopy都会创建新的对象
@@ -237,7 +244,7 @@ public let base: Base
 ​​​
 ​​​下面以UIViewController的多继承NSString的UTF8String函数为例，
 ​​​
-​​​```objective-c
+```
 ​​​@implementation UIViewController (Mutable)
 ​​​- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
 ​​​NSMethodSignature *sig = [super methodSignatureForSelector:aSelector];
@@ -253,14 +260,14 @@ public let base: Base
 ​​​}
 ​​​}
 ​​​@end
-​​​```
+```
 ​​​
 ​​​
 ​​​#### 分类的原理
 ​​​
 ​​​- 分类也是一个结构体
 ​​​
-​​​```c
+```
 ​​​struct objc_category {
 ​​​char * _Nonnull category_name                            
 ​​​char * _Nonnull class_name                               
@@ -268,7 +275,7 @@ public let base: Base
 ​​​struct objc_method_list * _Nullable class_methods        
 ​​​struct objc_protocol_list * _Nullable protocols          
 ​​​}                                                            
-​​​```
+```
 ​​​
 ​​​- 从category的定义也可以看出category的可为（可以添加实例方法，类方法，甚至可以实现协议）和不可为（原则上讲它只能添加方法，不能添加属性(成员变量)，不过可以通过运行时添加关联属性）
 ​​​- 分类中的可以写@property, 但不会生成`setter/getter`方法, 也不会生成实现以及私有的成员变量（编译时会报警告）; 
