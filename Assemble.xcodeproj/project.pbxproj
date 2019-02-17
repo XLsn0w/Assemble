@@ -15,6 +15,9 @@
 		35D4F8B622195B4E00AD086A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3AA21EF335E0012018B /* Assets.xcassets */; };
 		35D4F8B722195B4E00AD086A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3A721EF335E0012018B /* Main.storyboard */; };
 		35D4F8BF2219758000AD086A /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8BE2219758000AD086A /* Skill.swift */; };
+		35D4F8C122197A6500AD086A /* Question1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8C022197A6500AD086A /* Question1.swift */; };
+		35D4F8C322197C2600AD086A /* iOSLocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8C222197C2600AD086A /* iOSLocks.swift */; };
+		35D4F8C5221983E500AD086A /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8C4221983E500AD086A /* ViewControllerLifeCycle.swift */; };
 		7896D3A321EF335E0012018B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A221EF335E0012018B /* AppDelegate.m */; };
 		7896D3A621EF335E0012018B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A521EF335E0012018B /* ViewController.m */; };
 		7896D3A921EF335E0012018B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3A721EF335E0012018B /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		35D4F8BC22195B4E00AD086A /* Skill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D4F8BD22195B4E00AD086A /* Skill-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Skill-Info.plist"; path = "/Users/xlsn0w/Assemble/Skill-Info.plist"; sourceTree = "<absolute>"; };
 		35D4F8BE2219758000AD086A /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		35D4F8C022197A6500AD086A /* Question1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question1.swift; sourceTree = "<group>"; };
+		35D4F8C222197C2600AD086A /* iOSLocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSLocks.swift; sourceTree = "<group>"; };
+		35D4F8C4221983E500AD086A /* ViewControllerLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycle.swift; sourceTree = "<group>"; };
 		6ABC8F017EC2B599491BAF36 /* Pods-Assemble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assemble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Assemble/Pods-Assemble.debug.xcconfig"; sourceTree = "<group>"; };
 		7896D39E21EF335E0012018B /* Assemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7896D3A121EF335E0012018B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +151,9 @@
 				7896D3A521EF335E0012018B /* ViewController.m */,
 				78B5AF0621F722230038B6E5 /* iOS.swift */,
 				35D4F8BE2219758000AD086A /* Skill.swift */,
+				35D4F8C022197A6500AD086A /* Question1.swift */,
+				35D4F8C222197C2600AD086A /* iOSLocks.swift */,
+				35D4F8C4221983E500AD086A /* ViewControllerLifeCycle.swift */,
 				7896D3A721EF335E0012018B /* Main.storyboard */,
 				7896D3AA21EF335E0012018B /* Assets.xcassets */,
 				7896D3AC21EF335E0012018B /* LaunchScreen.storyboard */,
@@ -517,8 +526,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7896D3A621EF335E0012018B /* ViewController.m in Sources */,
+				35D4F8C122197A6500AD086A /* Question1.swift in Sources */,
 				7896D3B121EF335E0012018B /* main.m in Sources */,
+				35D4F8C5221983E500AD086A /* ViewControllerLifeCycle.swift in Sources */,
 				7896D3A321EF335E0012018B /* AppDelegate.m in Sources */,
+				35D4F8C322197C2600AD086A /* iOSLocks.swift in Sources */,
 				78B5AF0721F722230038B6E5 /* iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
