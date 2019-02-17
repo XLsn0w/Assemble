@@ -30,7 +30,7 @@
 说了解runtime但没听过method swizzling是骗人的。这题很容易搜到答案。定位一些疑难杂症bug，hack老项目实现，阅读第三方源码都有机会接触到这个概念。
 
 UIView和CALayer是啥关系?
-能答出UIView是CALayer的delegate就及格了，能说出UIView主要处理事件，CALayer负责绘制就更好，再聊下二者在使用过程中对动画流畅性影响的注意点就superb。UI流畅性是个大话题，推荐看下这两篇文章。中餐，西餐。
+能答出UIView是CALayer的delegate就及格了，能说出UIView主要处理事件，CALayer负责绘制就更好，再聊下二者在使用过程中对动画流畅性影响的注意点。UI流畅性是个大话题，推荐看下这两篇文章。中餐，西餐。
 
 如何高性能的给UIImageView加个圆角？（不准说layer.cornerRadius!）
 这题讨论的最多，还有说美工切图就搞定的。答主在项目里做过圆角头像的处理，里面的坑还真不少。cornerRadius会导致offscreen drawing有性能问题，美工切图无法适用有背景图的场景，即使加上shouldRasterize也有cache实效问题。正确的做法是切换到工作线程利用CoreGraphic API生成一个offscreen UIImage，再切换到main thread赋值给UIImageView。这里还涉及到UIImageView复用，圆角头像cache缓存（不能每次都去绘制），新旧头像替换等等逻辑。还有其他的实现方式，但思路离不开工作线程与主线程切换。
@@ -58,13 +58,6 @@ GCD里面有哪几种Queue？你自己建立过串行queue吗？背后的线程�
 
 用过coredata或者sqlite吗？读写是分线程的吗？遇到过死锁没？咋解决的？
 没用过sqlite是说不过去的。用过CoreData的肯定有很多血泪史要说。多谢线程模型你肯定做过比较选择。死锁是啥肯定也是要知道的，没遇到过至少能举个简单的例子来说明。单个线程可以死锁（main thread里dispatch_sync到main queue），多个线程直接也可以死锁（A，B线程互相持有对方需要的资源且互相等待）。
-
-http的post和get啥区别？（区别挺多的，麻烦多说点）
-这个可以说很多。不希望听到的答案有
-
-两个差不多，随便用一个。
-post比get安全（其实两个都不安全）
-能说下两个http格式有什么不同，各自应用的场景就合格了。更多可以阅读下这个答案。
 
 
  
