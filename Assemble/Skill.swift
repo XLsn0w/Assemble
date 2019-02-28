@@ -12,7 +12,9 @@
 现在有不少程序员是直接从arc上手的，从没接触过mrc，对arc的理解仅仅停留在apple帮助管理内存的层面。这个问题真正想了解的是对内存管理的理解，retain release虽然不用写了，但arc下还是会有内存泄漏野指针crash的bug存在。如果能从retain count这种内存管理策略的角度去阐述arc诞生的意义就算答对了。如果还能扯下其他类型的策略，比如java里的mark and sweep，那就加分点赞。
 
 请解释以下keywords的区别： assign vs weak, __block vs __weak
-这道题属于基础语法题，可以网上搜到答案。不过真有不少同学不知道weak在对象释放后会置为nil。__block关键字的理解稍微难点，因为在arc和mrc下含义（对retain count的影响）完全不同。理解了这几个关键字就能应付使用block时引入retain cycle的风险了。这题还在内存管理的范畴之内。
+这道题属于基础语法题，可以网上搜到答案。不过真有不少同学不知道weak在对象释放后会置为nil。
+ __block关键字的理解稍微难点，因为在arc和mrc下含义（对retain count的影响）完全不同。
+ 理解了这几个关键字就能应付使用block时引入retain cycle的风险了。这题还在内存管理的范畴之内。
 
 使用atomic一定是线程安全的吗？
 看这题的问法不用想答案肯定是NO。有些人说不出所以然，有些人知道通过property的方式使用才能保证安全，还有人知道这个用来做多线程安全会有性能损耗，更有出色的候选人能谈atomic,synchronized,NSLock,pthread mutex,OSSpinLock的差别。好奇宝宝点我。
