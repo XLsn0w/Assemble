@@ -5,6 +5,8 @@ use_frameworks!
 
 target 'Assemble' do
     
+pod 'XLsn0wKit_objc'
+
 pod 'RxSwift'
     
 pod 'YYModel'

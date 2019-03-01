@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35C5260E2229205600F3FF39 /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5260D2229205600F3FF39 /* InAppPurchaseViewController.m */; };
+		35C526112229208000F3FF39 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C526102229208000F3FF39 /* IAPManager.m */; };
 		35D4F8AE22195B4E00AD086A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A521EF335E0012018B /* ViewController.m */; };
 		35D4F8AF22195B4E00AD086A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3B021EF335E0012018B /* main.m */; };
 		35D4F8B022195B4E00AD086A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A221EF335E0012018B /* AppDelegate.m */; };
@@ -49,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		10259D2AD8A1045A2E126728 /* Pods_Assemble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assemble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35C5260C2229205600F3FF39 /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseViewController.h; sourceTree = "<group>"; };
+		35C5260D2229205600F3FF39 /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseViewController.m; sourceTree = "<group>"; };
+		35C5260F2229208000F3FF39 /* IAPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
+		35C526102229208000F3FF39 /* IAPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPManager.m; sourceTree = "<group>"; };
 		35D4F8BC22195B4E00AD086A /* Skill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D4F8BD22195B4E00AD086A /* Skill-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Skill-Info.plist"; path = "/Users/xlsn0w/Assemble/Skill-Info.plist"; sourceTree = "<absolute>"; };
 		35D4F8BE2219758000AD086A /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
@@ -149,6 +155,10 @@
 				7896D3A221EF335E0012018B /* AppDelegate.m */,
 				7896D3A421EF335E0012018B /* ViewController.h */,
 				7896D3A521EF335E0012018B /* ViewController.m */,
+				35C5260C2229205600F3FF39 /* InAppPurchaseViewController.h */,
+				35C5260D2229205600F3FF39 /* InAppPurchaseViewController.m */,
+				35C5260F2229208000F3FF39 /* IAPManager.h */,
+				35C526102229208000F3FF39 /* IAPManager.m */,
 				78B5AF0621F722230038B6E5 /* iOS.swift */,
 				35D4F8BE2219758000AD086A /* Skill.swift */,
 				35D4F8C022197A6500AD086A /* Question1.swift */,
@@ -525,10 +535,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C526112229208000F3FF39 /* IAPManager.m in Sources */,
 				7896D3A621EF335E0012018B /* ViewController.m in Sources */,
 				35D4F8C122197A6500AD086A /* Question1.swift in Sources */,
 				7896D3B121EF335E0012018B /* main.m in Sources */,
 				35D4F8C5221983E500AD086A /* ViewControllerLifeCycle.swift in Sources */,
+				35C5260E2229205600F3FF39 /* InAppPurchaseViewController.m in Sources */,
 				7896D3A321EF335E0012018B /* AppDelegate.m in Sources */,
 				35D4F8C322197C2600AD086A /* iOSLocks.swift in Sources */,
 				78B5AF0721F722230038B6E5 /* iOS.swift in Sources */,
