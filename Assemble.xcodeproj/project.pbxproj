@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3570EF3D222962B60094297A /* AppDelegate+GuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF28222962B60094297A /* AppDelegate+GuidePage.m */; };
+		3570EF3E222962B60094297A /* AppDelegate+Umeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF2C222962B60094297A /* AppDelegate+Umeng.m */; };
+		3570EF3F222962B60094297A /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF2E222962B60094297A /* AppDelegate+Config.m */; };
+		3570EF40222962B60094297A /* AppDelegate+WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF31222962B60094297A /* AppDelegate+WebView.m */; };
+		3570EF41222962B60094297A /* AppDelegate+Pay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF35222962B60094297A /* AppDelegate+Pay.m */; };
+		3570EF42222962B60094297A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF36222962B60094297A /* AppDelegate.m */; };
+		3570EF43222962B60094297A /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF39222962B60094297A /* AppDelegate+JPush.m */; };
+		3570EF44222962B60094297A /* AppDelegate+LaunchAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3570EF3B222962B60094297A /* AppDelegate+LaunchAD.m */; };
 		35C5260E2229205600F3FF39 /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5260D2229205600F3FF39 /* InAppPurchaseViewController.m */; };
 		35C526112229208000F3FF39 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C526102229208000F3FF39 /* IAPManager.m */; };
 		35D4F8AE22195B4E00AD086A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A521EF335E0012018B /* ViewController.m */; };
 		35D4F8AF22195B4E00AD086A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3B021EF335E0012018B /* main.m */; };
-		35D4F8B022195B4E00AD086A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A221EF335E0012018B /* AppDelegate.m */; };
 		35D4F8B122195B4E00AD086A /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5AF0621F722230038B6E5 /* iOS.swift */; };
 		35D4F8B522195B4E00AD086A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3AC21EF335E0012018B /* LaunchScreen.storyboard */; };
 		35D4F8B622195B4E00AD086A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3AA21EF335E0012018B /* Assets.xcassets */; };
@@ -20,7 +27,6 @@
 		35D4F8C122197A6500AD086A /* Question1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8C022197A6500AD086A /* Question1.swift */; };
 		35D4F8C322197C2600AD086A /* iOSLocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8C222197C2600AD086A /* iOSLocks.swift */; };
 		35D4F8C5221983E500AD086A /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F8C4221983E500AD086A /* ViewControllerLifeCycle.swift */; };
-		7896D3A321EF335E0012018B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A221EF335E0012018B /* AppDelegate.m */; };
 		7896D3A621EF335E0012018B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7896D3A521EF335E0012018B /* ViewController.m */; };
 		7896D3A921EF335E0012018B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3A721EF335E0012018B /* Main.storyboard */; };
 		7896D3AB21EF335E0012018B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7896D3AA21EF335E0012018B /* Assets.xcassets */; };
@@ -51,6 +57,22 @@
 
 /* Begin PBXFileReference section */
 		10259D2AD8A1045A2E126728 /* Pods_Assemble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assemble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3570EF27222962B60094297A /* AppDelegate+GuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+GuidePage.h"; sourceTree = "<group>"; };
+		3570EF28222962B60094297A /* AppDelegate+GuidePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+GuidePage.m"; sourceTree = "<group>"; };
+		3570EF29222962B60094297A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3570EF2B222962B60094297A /* AppDelegate+Umeng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Umeng.h"; sourceTree = "<group>"; };
+		3570EF2C222962B60094297A /* AppDelegate+Umeng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Umeng.m"; sourceTree = "<group>"; };
+		3570EF2E222962B60094297A /* AppDelegate+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
+		3570EF2F222962B60094297A /* AppDelegate+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
+		3570EF31222962B60094297A /* AppDelegate+WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+WebView.m"; sourceTree = "<group>"; };
+		3570EF32222962B60094297A /* AppDelegate+WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+WebView.h"; sourceTree = "<group>"; };
+		3570EF34222962B60094297A /* AppDelegate+Pay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Pay.h"; sourceTree = "<group>"; };
+		3570EF35222962B60094297A /* AppDelegate+Pay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Pay.m"; sourceTree = "<group>"; };
+		3570EF36222962B60094297A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3570EF38222962B60094297A /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
+		3570EF39222962B60094297A /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
+		3570EF3B222962B60094297A /* AppDelegate+LaunchAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LaunchAD.m"; sourceTree = "<group>"; };
+		3570EF3C222962B60094297A /* AppDelegate+LaunchAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LaunchAD.h"; sourceTree = "<group>"; };
 		35C5260C2229205600F3FF39 /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseViewController.h; sourceTree = "<group>"; };
 		35C5260D2229205600F3FF39 /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseViewController.m; sourceTree = "<group>"; };
 		35C5260F2229208000F3FF39 /* IAPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
@@ -63,8 +85,6 @@
 		35D4F8C4221983E500AD086A /* ViewControllerLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycle.swift; sourceTree = "<group>"; };
 		6ABC8F017EC2B599491BAF36 /* Pods-Assemble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assemble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Assemble/Pods-Assemble.debug.xcconfig"; sourceTree = "<group>"; };
 		7896D39E21EF335E0012018B /* Assemble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assemble.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7896D3A121EF335E0012018B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7896D3A221EF335E0012018B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7896D3A421EF335E0012018B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7896D3A521EF335E0012018B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7896D3A821EF335E0012018B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +136,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3570EF25222962B60094297A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF29222962B60094297A /* AppDelegate.h */,
+				3570EF36222962B60094297A /* AppDelegate.m */,
+				3570EF26222962B60094297A /* GuidePage */,
+				3570EF2A222962B60094297A /* Umeng */,
+				3570EF2D222962B60094297A /* Config */,
+				3570EF30222962B60094297A /* WebView */,
+				3570EF33222962B60094297A /* Pay */,
+				3570EF37222962B60094297A /* JPush */,
+				3570EF3A222962B60094297A /* LaunchAD */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3570EF26222962B60094297A /* GuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF27222962B60094297A /* AppDelegate+GuidePage.h */,
+				3570EF28222962B60094297A /* AppDelegate+GuidePage.m */,
+			);
+			path = GuidePage;
+			sourceTree = "<group>";
+		};
+		3570EF2A222962B60094297A /* Umeng */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF2B222962B60094297A /* AppDelegate+Umeng.h */,
+				3570EF2C222962B60094297A /* AppDelegate+Umeng.m */,
+			);
+			path = Umeng;
+			sourceTree = "<group>";
+		};
+		3570EF2D222962B60094297A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF2E222962B60094297A /* AppDelegate+Config.m */,
+				3570EF2F222962B60094297A /* AppDelegate+Config.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3570EF30222962B60094297A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF31222962B60094297A /* AppDelegate+WebView.m */,
+				3570EF32222962B60094297A /* AppDelegate+WebView.h */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		3570EF33222962B60094297A /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF34222962B60094297A /* AppDelegate+Pay.h */,
+				3570EF35222962B60094297A /* AppDelegate+Pay.m */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		3570EF37222962B60094297A /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF38222962B60094297A /* AppDelegate+JPush.h */,
+				3570EF39222962B60094297A /* AppDelegate+JPush.m */,
+			);
+			path = JPush;
+			sourceTree = "<group>";
+		};
+		3570EF3A222962B60094297A /* LaunchAD */ = {
+			isa = PBXGroup;
+			children = (
+				3570EF3B222962B60094297A /* AppDelegate+LaunchAD.m */,
+				3570EF3C222962B60094297A /* AppDelegate+LaunchAD.h */,
+			);
+			path = LaunchAD;
+			sourceTree = "<group>";
+		};
 		4D723A4D2CBFFB7F97951BA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,8 +250,7 @@
 		7896D3A021EF335E0012018B /* Assemble */ = {
 			isa = PBXGroup;
 			children = (
-				7896D3A121EF335E0012018B /* AppDelegate.h */,
-				7896D3A221EF335E0012018B /* AppDelegate.m */,
+				3570EF25222962B60094297A /* AppDelegate */,
 				7896D3A421EF335E0012018B /* ViewController.h */,
 				7896D3A521EF335E0012018B /* ViewController.m */,
 				35C5260C2229205600F3FF39 /* InAppPurchaseViewController.h */,
@@ -526,7 +624,6 @@
 				35D4F8AE22195B4E00AD086A /* ViewController.m in Sources */,
 				35D4F8AF22195B4E00AD086A /* main.m in Sources */,
 				35D4F8BF2219758000AD086A /* Skill.swift in Sources */,
-				35D4F8B022195B4E00AD086A /* AppDelegate.m in Sources */,
 				35D4F8B122195B4E00AD086A /* iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,15 +632,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3570EF3F222962B60094297A /* AppDelegate+Config.m in Sources */,
 				35C526112229208000F3FF39 /* IAPManager.m in Sources */,
+				3570EF40222962B60094297A /* AppDelegate+WebView.m in Sources */,
+				3570EF41222962B60094297A /* AppDelegate+Pay.m in Sources */,
 				7896D3A621EF335E0012018B /* ViewController.m in Sources */,
 				35D4F8C122197A6500AD086A /* Question1.swift in Sources */,
 				7896D3B121EF335E0012018B /* main.m in Sources */,
 				35D4F8C5221983E500AD086A /* ViewControllerLifeCycle.swift in Sources */,
 				35C5260E2229205600F3FF39 /* InAppPurchaseViewController.m in Sources */,
-				7896D3A321EF335E0012018B /* AppDelegate.m in Sources */,
+				3570EF3E222962B60094297A /* AppDelegate+Umeng.m in Sources */,
 				35D4F8C322197C2600AD086A /* iOSLocks.swift in Sources */,
+				3570EF3D222962B60094297A /* AppDelegate+GuidePage.m in Sources */,
+				3570EF44222962B60094297A /* AppDelegate+LaunchAD.m in Sources */,
 				78B5AF0721F722230038B6E5 /* iOS.swift in Sources */,
+				3570EF42222962B60094297A /* AppDelegate.m in Sources */,
+				3570EF43222962B60094297A /* AppDelegate+JPush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
