@@ -10,9 +10,15 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *racBtn;
+
 @end
 
 @implementation ViewController
+
+- (IBAction)racBtnAction:(id)sender {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,84 +51,81 @@
 }
 
 /**获取用户权限列表**/
-- (void)getUserPermissionData
-{
+- (void)getUserPermissionData {
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-    params[@"userId"] = [NSUserDefault objectForKey:UserId];
-    params[@"sessionKey"] = [NSUserDefault objectForKey:SessionKey];
-    
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    
-    params[@"data"] = dict.JSONString;
-    
-    [WGHttpTool postWithURL:RequestUrlStr(getFunctionListByUserId) parameters:params success:^(id json) {
-        
-        NSLog(@"获取用户权限列表");
-        dispatch_semaphore_signal(sema);
-        
-    } failure:^(NSError *error) {
-        
-        dispatch_semaphore_signal(sema);
-    }];
-    
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+//    params[@"userId"] = [NSUserDefault objectForKey:UserId];
+//    params[@"sessionKey"] = [NSUserDefault objectForKey:SessionKey];
+//
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+//
+//    params[@"data"] = dict.JSONString;
+//
+//    [WGHttpTool postWithURL:RequestUrlStr(getFunctionListByUserId) parameters:params success:^(id json) {
+//
+//        NSLog(@"获取用户权限列表");
+//        dispatch_semaphore_signal(sema);
+//
+//    } failure:^(NSError *error) {
+//
+//        dispatch_semaphore_signal(sema);
+//    }];
+//
+//    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 }
 
 /**获取工作台配置数据**/
-- (void)getDeskSettingData
-{
-    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    
-    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-    params[@"userId"] = [SNUserDefault objectForKey:UserId];
-    params[@"sessionKey"] = [SNUserDefault objectForKey:SessionKey];
-    
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    dict[@"type"] = @"1";
-    dict[@"enabled"] = @"1";
-    dict[@"workbenchConfigureVersion"] = @"2";
-    params[@"data"] = dict.JSONString;
-    
-    [WGHttpTool postWithURL:RequestUrlStr(getUserWorkbenchConfigureListByCondition) parameters:params success:^(id json) {
-        
-        NSLog(@"获取工作台配置数据");
-        dispatch_semaphore_signal(sema);
-        
-    } failure:^(NSError *error) {
-        
-        dispatch_semaphore_signal(sema);
-    }];
-    
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+- (void)getDeskSettingData {
+//    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+//
+//    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+//    params[@"userId"] = [NSUserDefaults objectForKey:UserId];
+//    params[@"sessionKey"] = [SNUserDefault objectForKey:SessionKey];
+//
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+//    dict[@"type"] = @"1";
+//    dict[@"enabled"] = @"1";
+//    dict[@"workbenchConfigureVersion"] = @"2";
+//    params[@"data"] = dict.JSONString;
+//
+//    [WGHttpTool postWithURL:RequestUrlStr(getUserWorkbenchConfigureListByCondition) parameters:params success:^(id json) {
+//
+//        NSLog(@"获取工作台配置数据");
+//        dispatch_semaphore_signal(sema);
+//
+//    } failure:^(NSError *error) {
+//
+//        dispatch_semaphore_signal(sema);
+//    }];
+//
+//    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 }
 
 /**获取工作台数据**/
-- (void)getDeskDetailData
-{
-    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    
-    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-    params[@"userId"] = [SNUserDefault objectForKey:UserId];
-    params[@"sessionKey"] = [SNUserDefault objectForKey:SessionKey];
-    
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    dict[@"startIndex"] = @"0";
-    dict[@"length"] = @"5";
-    params[@"data"] = dict.JSONString;
-    
-    [WGHttpTool postWithURL:RequestUrlStr(getNewWorkbenchData) parameters:params success:^(id json) {
-        
-        NSLog(@"获取工作台数据");
-        dispatch_semaphore_signal(sema);
-        
-    } failure:^(NSError *error) {
-        
-        dispatch_semaphore_signal(sema);
-    }];
-    
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+- (void)getDeskDetailData {
+//    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+//
+//    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+//    params[@"userId"] = [SNUserDefault objectForKey:UserId];
+//    params[@"sessionKey"] = [SNUserDefault objectForKey:SessionKey];
+//
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+//    dict[@"startIndex"] = @"0";
+//    dict[@"length"] = @"5";
+//    params[@"data"] = dict.JSONString;
+//
+//    [WGHttpTool postWithURL:RequestUrlStr(getNewWorkbenchData) parameters:params success:^(id json) {
+//
+//        NSLog(@"获取工作台数据");
+//        dispatch_semaphore_signal(sema);
+//
+//    } failure:^(NSError *error) {
+//
+//        dispatch_semaphore_signal(sema);
+//    }];
+//
+//    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

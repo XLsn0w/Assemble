@@ -149,7 +149,6 @@ static IAPManager *manager = nil;
 }
 
 - (void)buySuccessWithPaymentQueue:(SKPaymentQueue *)queue Transaction:(SKPaymentTransaction *)transaction {
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSDictionary *params = @{@"user_id":@"user_id",
                              // 获取商品
@@ -162,7 +161,7 @@ static IAPManager *manager = nil;
             // 防止丢单, 必须在服务器确定后从交易队列删除交易
             // 如果不从交易队列上删除交易, 下次调用addTransactionObserver:, 仍然会回调'updatedTransactions'方法, 以此处理丢单
             
-            WELog(@"购买成功");
+            NSLog(@"购买成功");
             [queue finishTransaction:transaction];
         }
         

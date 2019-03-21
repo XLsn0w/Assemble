@@ -23,5 +23,6 @@ pod 'SnapKit'
 pod 'KVOController'
 pod 'FBMemoryProfiler'
 
+pod 'ReactiveObjC'
 
 end
